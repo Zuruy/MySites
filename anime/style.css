@@ -1,0 +1,95 @@
+.perso{
+   
+    align-items: center;
+    margin: auto;
+    display: inline;
+    width:100px;
+    height: 300px;
+    display: flex;
+    transition-duration: 1s;
+ 
+    
+   
+}
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.perso:hover{
+    width: 300px;
+  
+}
+#sung img{
+
+    height: 300px;
+    filter: grayscale(100%);
+    transition-duration: 1s;
+}
+#sung img:hover{
+
+    filter: grayscale(0%);
+    width: 300px;
+}
+#fate img{
+
+    height: 300px;
+    filter: grayscale(100%);
+    transition-duration: 1s;
+}
+#fate img:hover{
+   
+    filter: grayscale(0%);
+    width: 200px;
+}
+img{
+    width: 100px;
+    height: 300px;
+}
+#rimaru img{
+    height: 300px;
+    filter: grayscale(100%);
+    transition-duration: 1s;
+}
+#rimaru img:hover{
+    
+    filter: grayscale(0%);
+    width: 200px;
+}
+#gintoki img{
+    
+    height: 300px;
+    filter: grayscale(100%);
+    transition-duration: 1s;
+}
+#gintoki img:hover{
+   
+    filter: grayscale(0%);
+    width: 200px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Isso garante que a div ocupe toda a altura da tela */
+}
+body, html {
+    height: 100%;
+    align-items: center;
+ 
+
+}
+.informacao{
+   border: 2px solid gray;
+    width: 600px;
+    height: 290px;
+    overflow: hidden;
+    background-color: darkcyan;
+}
+.informacao h1{
+    text-align: center;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    max-width: 1200px;
+    align-items: center;
+}

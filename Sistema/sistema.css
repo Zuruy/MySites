@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+body{
+    background-color: black;
+    margin: auto;   
+}
+h1{
+    text-align: center;
+    box-shadow: 0px 2px 14px 2px rgb(190, 1, 1);
+    color: rgb(251, 72, 72);  
+}
+p{
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+nav>a{
+    text-decoration: none;
+    color: white;
+    background-color: #66666655;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
+    font-size: 22px;
+}
+nav>a:hover{
+        color: aquamarine;
+}
+#negar:hover{
+    color: darkred;
+}
+.avaliacao{
+    color: darkred ;
+    box-shadow:0px 2px 5px 2px rgb(190, 1, 1); ;
+}

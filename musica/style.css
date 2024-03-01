@@ -1,0 +1,52 @@
+#musica {
+    width: 300px;
+    height: 470px; /* Alterado para 'auto' para acomodar o conteúdo */
+    padding: 15px;
+    border: 1px solid #791462;
+    border-radius: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:white;
+    background-image: linear-gradient(to bottom,#FF6B97,#FF4E8C,#BC2076,#791462);
+    text-align: center; /* Alinhamento centralizado */
+}
+
+#musica img {
+    width: 100%; /* Alterado para 100% para preencher a largura */
+    border-radius: 10px;
+}
+
+#cima {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.audio-wrapper {
+    margin-top: 20px; /* Espaçamento acima do player de áudio */
+}
+
+.audio-wrapper audio {
+    width: 100%; /* Preenche a largura do wrapper */
+    background-color: transparent; /* Remove o fundo do player de áudio */
+    border: none; /* Remove a borda */
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#letra{
+    width: 300px;
+    height: 470px; /* Alterado para 'auto' para acomodar o conteúdo */
+    padding: 15px;
+    border: 1px solid #791462;
+    border-radius: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:white;
+    background-image: linear-gradient(to bottom,#FF6B97,#FF4E8C,#BC2076,#791462);
+    text-align: center; 
+}

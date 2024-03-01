@@ -1,0 +1,57 @@
+body{
+  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+
+}
+
+/* Estilos básicos para o menu */
+header nav ul {
+    
+    list-style: none;
+    padding: 0;
+  }
+  
+  header nav ul li {
+   
+   
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  header nav ul li.dropdown ul {
+   
+    display: none;
+    position: absolute;
+    background-color:rgb(120, 166, 251);
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  header nav ul li.dropdown:hover ul {
+  
+    display: block;
+  }
+  
+  header nav ul li.dropdown ul li {
+    display: block;
+  }
+  a{
+    padding: 20px;
+    text-decoration: none;
+    color:#0B816D;
+  }
+  a:hover{
+    
+    text-decoration:overline;
+  }
+  
+  .img{
+    margin-left: 200px;
+    border-radius: 200px ;
+    opacity: 90%;
+    position: relative;
+
+  }
+  /* Estilos adicionais conforme necessário */
+  

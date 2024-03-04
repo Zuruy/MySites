@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* Isso garante que padding e border não alterem a largura e altura dos elementos */
+}
+
+nav {
+    height: 35px;
+    padding: 5px;
+    background-color: #004186;
+    width: 100%;
+    color: white;
+}
+
+nav p, h5 {
+    padding-left: 40px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    /* Distribui os itens horizontalmente */
+    border: 1px solid rgba(128, 128, 128, 0.612);
+    height: 80px;
+    padding: 0 20px; /* Adiciona um espaçamento interno ao cabeçalho */
+}
+
+header > img {
+    height: 45px;
+    margin-top: 9px;
+    margin-right: 20px;
+}
+
+#direita {
+    margin-left: auto; /* Coloca a div à direita */
+    display: flex; /* Faz com que os itens dentro da div fiquem dispostos em linha */
+}
+
+#direita img {
+    margin-right: 10px; /* Adiciona um espaço entre as imagens */
+}
+
+.carousel-container {
+    width: calc(70% - 40px); /* 70% da largura da tela menos a margem à esquerda */
+    height: 300px; /* Altura do carrossel */
+    overflow: hidden; /* Oculta as partes excedentes das imagens */
+    position: relative; /* Necessário para o posicionamento absoluto dos textos */
+    margin-left: 40px;
+    margin-top: 20px;
+    float: left; /* Faz com que o carrossel flutue à esquerda */
+}
+
+.carousel {
+    display: flex; /* Exibe as imagens em linha */
+    transition: transform 0.5s ease; /* Adiciona uma transição suave */
+}
+
+.carousel-item {
+    width: 100%; /* As imagens devem ocupar toda a largura do carrossel */
+    height: 100%; /* As imagens devem ocupar toda a altura do carrossel */
+    background-size: cover; /* Redimensiona as imagens para cobrir toda a área */
+    background-position: center; /* Centraliza as imagens horizontalmente */
+    position: absolute; /* Permite o posicionamento absoluto das imagens */
+    top: 0; /* Alinha as imagens ao topo do carrossel */
+    left: 0; /* Alinha as imagens à esquerda do carrossel */
+    opacity: 0; /* Inicialmente, as imagens estão invisíveis */
+    transition: opacity 0.5s ease; /* Adiciona uma transição suave para a opacidade */
+    z-index: 1; /* Garante que o degradê apareça atrás do texto */
+}
+
+.carousel-item.active {
+    opacity: 1; /* Torna a imagem ativa visível */
+}
+
+.text-overlay {
+    margin-left: 20px;
+    margin-top: 120px;
+    position: absolute; /* Permite o posicionamento absoluto dos textos */
+    /* Centraliza o texto na tela */
+    color: white; /* Cor do texto */
+    text-align: left;
+    /* Alinha o texto ao centro */
+    z-index: 2; /* Garante que o texto esteja na frente do degradê */
+}
+
+.text-overlay h1 {
+    margin-bottom: 10px;
+}
+
+.text-overlay p {
+    margin-bottom: 30px;
+    font-size: 1.5em;
+}
+
+.text-overlay > a {
+    text-transform: uppercase;
+    margin-top: 20px;
+    background-color: #DF8D2C;
+    text-decoration: none;
+    color: white;
+    padding: 15px 60px;
+    border-radius: 5px;
+    position: relative; /* Adicione esta linha */
+    z-index: 4; /* Adicione esta linha */
+    pointer-events: auto; /* Permitir eventos do mouse no link */
+    cursor: pointer;
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.341), rgba(0, 0, 255, 0.318));
+    z-index: 0; /* Coloca o degradê atrás da imagem */
+}
+
+.carousel-item:first-child {
+    animation: fade 10s infinite; /* 10s é a duração de cada slide */
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    75% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@media only screen and (max-width: 600px) {
+    .carousel-container {
+        width: 100%;
+        height: 350px;
+        margin: 0%;
+    }
+
+    .text-overlay a {
+        padding: 15px 190px;
+    }
+
+    #direita {
+        margin: 10px 0;
+        /* Adiciona margem acima e abaixo para separar da parte superior */
+        justify-content: center;
+        /* Centraliza as imagens quando a tela é reduzida */
+        margin-left: 0; /* Remove a margem à esquerda */
+    }
+}

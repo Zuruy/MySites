@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.caixa-palavras {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.linha {
+    display: flex;
+    justify-content: center;
+}
+
+.celula {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.celula:hover {
+    background-color: #f0f0f0;
+}
+
+.celula.encontrada {
+    background-color: lightgreen;
+}
+
+.palavras-buscadas {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.palavras-buscadas p {
+    margin: 5px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}

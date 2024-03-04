@@ -1,0 +1,49 @@
+
+body{
+    margin: 0%;
+    padding: 0%;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+     
+}
+.jogos{
+    display: inline;
+    margin: 10px;
+    width: 200px;
+    height: 300px;
+    
+    border-radius: 10px;
+}
+.jogos  img{
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    transition-duration: 1s;
+}
+.jogos img:hover{
+    width: 300px;
+    box-shadow: 1px 1px 10px 3px black;
+}
+#fundo{
+    width: 100%;
+    height: 100vh;
+    inset: 0;
+   position: fixed;
+    z-index: -1;
+
+}
+#fundo img{
+    width: 100%;
+    height: 100%;
+}
+#fundo::after{
+    backdrop-filter: blur(5px);
+    background-color:transparent;
+    content: "";
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    inset: 0;
+  
+
+}

@@ -102,9 +102,6 @@ nav > a:hover {
      margin-top: 50%;
      transition-duration: 1.5s;
  }
- #secreto P{
-
- }
  #secreto img {
      
     opacity: 0.5;
@@ -117,4 +114,10 @@ nav > a:hover {
  #secreto:hover {
      opacity: 1;
     
+ }
+ @media only screen and (max-width: 600px) {
+    .classes{
+        display: block;
+    }
+
  }

@@ -1,20 +1,23 @@
 @charset "UTF-8";
 
-body{
+body {
     background-color: black;
-    margin: auto;   
+    margin: auto;
 }
-h1{
+
+h1 {
     text-align: center;
     box-shadow: 0px 2px 14px 2px rgb(190, 1, 1);
-    color: rgb(251, 72, 72);  
+    color: rgb(251, 72, 72);
 }
-p{
+
+p {
     color: white;
     font-size: 24px;
     text-align: center;
 }
-nav>a{
+
+nav > a {
     text-decoration: none;
     color: white;
     background-color: #66666655;
@@ -23,13 +26,95 @@ nav>a{
     border-radius: 25px;
     font-size: 22px;
 }
-nav>a:hover{
-        color: aquamarine;
+
+nav > a:hover {
+    color: aquamarine;
 }
-#negar:hover{
+
+#negar:hover {
     color: darkred;
 }
-.avaliacao{
-    color: darkred ;
-    box-shadow:0px 2px 5px 2px rgb(190, 1, 1); ;
+
+.avaliacao {
+    color: darkred;
+    box-shadow: 0px 2px 5px 2px rgb(190, 1, 1);
 }
+
+.classes {
+    margin: 5px;
+    display: inline-block;
+    border: 2px solid white;
+    width: 300px;
+    height: 390px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition-duration: 0.9s;
+}
+
+.classes img {
+    position: absolute;
+    opacity: 0.5;
+    width: 300px;
+    height: 390px;
+    border-radius: 10px;
+    transition-duration: 2s;
+}
+.classes img:hover {
+    opacity: 1; /* Reduzi a opacidade da imagem quando o mouse passa sobre ela */
+
+    /* Aumentei a opacidade do elemento .informe quando o mouse passa sobre a imagem */
+
+}
+.informe {
+    color: white;
+    padding: 20px;
+    padding-bottom: 30px;
+    position: absolute;
+    width: 250px;
+    text-align: justify;
+    transition-duration: 2s; /* Adicionei uma transição para suavizar a mudança de opacidade */
+}
+
+
+
+/* Adicionei um estilo para quando o elemento .informe estiver ativo (clicado) */
+.informe h2{
+    color: white;
+    text-align: center
+    ;
+}
+
+#secreto {
+    opacity: 0;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+     margin: 5px;
+     display: inline-block;
+     border: 2px solid white;
+     width: 300px;
+     height: 390px;
+     border-radius: 10px;
+     font-size: 16px;
+     transition-duration: 0.9s;
+     position: absolute;
+     margin-top: 50%;
+     transition-duration: 1.5s;
+ }
+ #secreto P{
+
+ }
+ #secreto img {
+     
+    opacity: 0.5;
+     width: 300px;
+     height: 390px;
+     border-radius: 10px;
+     transition-duration: 2s;
+ }
+ 
+ #secreto:hover {
+     opacity: 1;
+    
+ }

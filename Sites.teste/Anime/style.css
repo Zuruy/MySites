@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0%;
+    
+}
+
+
+header{
+
+    width: 100%;
+    height: 650px;
+}
+header h1{
+    text-align: center;
+    
+   position: relative;
+    color: transparent;
+    -webkit-text-stroke: 3px white;
+    letter-spacing: 20px;
+    font-size: 3em;
+   
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+}
+#fundo{
+    position: absolute;
+    z-index:-1;
+    width: 100%;
+    height: 100%;
+}
+#fundo img{
+ 
+    width: 100%;
+    height: 650px;
+}
+nav{
+    height: 40px;
+    width: 100%;
+
+    position: fixed;
+    background-color:transparent;
+    backdrop-filter: blur(15px);
+    
+}
+nav a{
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 50px;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    transition-duration: 0.8s;
+}
+nav a:hover{
+    font-size: 1.3em;
+    text-decoration: underline;
+    color: rgb(252, 136, 94)
+}
+h2,p{
+    margin-bottom: 10px;
+}
+h2{
+    font-size: 1.6em;
+    color:rgb(253, 156, 45);
+}
+p{
+    margin-top: 10px;
+    font-size: 1.2em
+}
+#sobre:target{
+   
+
+}
+#Curiosidade:target{
+  
+
+}
+#franquia:target{
+  
+}
+main{
+    margin: auto;
+    text-align: justify;
+    max-width: 900px;
+}
+.info{
+    display: inline;
+
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+.info img{
+ 
+    display: inline;
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    transition-duration: 2s;
+}
+.info img:hover{
+    opacity: 0;
+}
+.nome{
+    display: inline;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    height: 300px;
+    background-image: linear-gradient(to bottom, rgb(255, 134, 64), rgb(246, 93, 51));
+
+    color: white;
+    position: absolute;
+    z-index: -1;
+}

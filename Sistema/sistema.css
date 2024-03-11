@@ -3,6 +3,8 @@
 body {
     background-color: black;
     margin: auto;
+    color: white;
+    font-size: 22px;
 }
 
 h1 {
@@ -17,7 +19,7 @@ p {
     text-align: center;
 }
 
-nav > a {
+ a {
     text-decoration: none;
     color: white;
     background-color: #66666655;
@@ -27,7 +29,7 @@ nav > a {
     font-size: 22px;
 }
 
-nav > a:hover {
+a:hover {
     color: aquamarine;
 }
 
@@ -113,6 +115,9 @@ nav > a:hover {
  
  #secreto:hover {
      opacity: 1;
+    
+ }
+ input type(text){
     
  }
  @media only screen and (max-width: 700px) {

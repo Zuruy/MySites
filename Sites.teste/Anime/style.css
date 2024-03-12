@@ -140,3 +140,35 @@ aside div{
     left: 50%;
     width: 300px;
 }
+@media only screen and (max-width:600px)
+{
+    
+    header h1 {
+        font-size: 2em; /* Reduza o tamanho da fonte do cabeçalho para dispositivos móveis */
+        -webkit-text-stroke: 2px white; /* Reduza a largura da borda de texto */
+        letter-spacing: 10px; /* Reduza o espaçamento entre letras */
+    }
+
+  
+    nav a {
+        font-size: 1em; /* Reduza o tamanho da fonte dos links de navegação */
+        margin-top: 20px; /* Reduza a margem superior dos links de navegação */
+    }
+
+    aside {
+        height: auto; /* Ajuste a altura da barra lateral para dispositivos móveis */
+    }
+
+    aside img {
+	opacity:0.6;
+        width: 100%; /* Faça a imagem da barra lateral ocupar toda a largura disponível */
+        height: 100%; /* Ajuste a altura automaticamente para manter a proporção */
+    }
+
+    aside p {
+
+	text-align:left;
+	color:black;
+        font-size: 1.2em; /* Reduza o tamanho da fonte do texto da barra lateral */
+    }
+}

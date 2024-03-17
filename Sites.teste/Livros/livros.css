@@ -1,4 +1,4 @@
-*{
+body{
     margin: 0;
     padding: 0;
 
@@ -34,8 +34,8 @@ header h1{
 }
 .capas{
    
-    width: 130px;
-    height: 190px;
+    width: 150px;
+    height: 220px;
 
 }
 .capas img{
@@ -88,8 +88,8 @@ header h1{
     z-index:-1 ;
     text-align: center;
     color: white;
-    width: 130px;
-    height: 190px;
+    width: 150px;
+    height: 220px;
     position: absolute;
 }
 .ler h3{

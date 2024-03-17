@@ -10,6 +10,7 @@ header{
     color: white;
 }
 header h1{
+  
     transition-duration: 1s;
 }
 header h1:hover{
@@ -64,6 +65,10 @@ header h1:hover{
     text-align: center;
     margin-bottom: 10px;
 }
+.livros img:hover{
+    width: 110%;
+    height: 110%;
+}
 .livros img:hover ~ .info{
    
     visibility: visible;
@@ -73,6 +78,7 @@ a{
     text-decoration: none;
 }
 main{
+    font-size: 1.4em;
     margin-top: 20px;
     margin: auto;
     width: 600px;
@@ -84,10 +90,12 @@ main{
 
 }
 #black{
+    position: fixed;
   margin: 0%;
   padding: 0%;
 }
 #check{
+    
     display: inline;
     position: relative;
     width: 50px;
@@ -96,6 +104,7 @@ main{
     align-items: center;
 }
 #check img{
+   
     width: 30px;
 }
 #luna{

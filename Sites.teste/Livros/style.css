@@ -1,0 +1,69 @@
+.chek{
+    display: none;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.label{
+    margin-top: 10px;
+    border-radius: 15px;
+    background-color: 
+    gray;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    position: fixed;
+    padding: 5px;
+    transition-duration: 0.7s;
+
+}
+#movimento
+{
+    background-color:white;
+    border-radius:50% ;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    position: relative;
+    transition: left 0.4s ease;
+}
+.chek:checked + .label #movimento{
+
+    left: 30px;
+}
+.chek:checked + .label{
+    background-color: rgb(64, 196, 64);
+}
+
+#dark{
+    transition-duration: 0.8s;
+  
+    width: 100%;
+    height: 100vh;
+}
+#main{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    width: 800px;
+
+    margin: auto;
+}
+#main h1{
+    text-align: center;
+}
+
+header{
+    width: 100%;
+    height: 400px;
+}
+header img{
+    
+    width: 100%;
+    height: 100%;
+}
+.chek:checked ~ #dark{
+    background-color: black;
+    color: white;
+}

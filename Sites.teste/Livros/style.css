@@ -6,6 +6,7 @@
     display: none;
 }
 body{
+    
     margin: 0%;
     padding: 0%;
 }
@@ -42,10 +43,13 @@ body{
 }
 
 #dark{
+    position: fixed;
+    overflow: scroll;
+    z-index: -1;
     transition-duration: 0.8s;
-  
-    width: 100%;
     height: 100vh;
+    width: 100%;
+  
 }
 #main{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -98,8 +102,8 @@ ul{
     line-height: 30px;
 }
 .Proximo{
-    position: absolute;
-    left: 80%;
+    position: relative;
+    left: 90%;
     margin-top: 30px;
     border-radius: 20px;
     font-size: 1.2em;
@@ -107,4 +111,18 @@ ul{
     color: white;
     text-decoration: none;
     background-color: rgb(68, 68, 68);
+}
+.anterior{
+    right: 20%;
+    position: relative;
+    margin-top: 30px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(68, 68, 68);
+}
+p{
+
 }

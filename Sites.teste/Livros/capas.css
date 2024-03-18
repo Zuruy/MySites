@@ -1,0 +1,44 @@
+.capasvan{
+    margin: 20px;
+    width: 150px;
+    height: 220px;
+
+}
+.capasvan img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    transition-duration: 1s;
+
+}
+.capasvan img:hover{
+    opacity: 0.9%;
+    box-shadow: 5px 3px 15px 2px black;
+    
+}
+.capasvan:hover ~ .infovan{
+    
+    visibility: visible;
+}
+.infovan{
+    content: "";
+    top: 0;
+   
+    right:0;
+    visibility:hidden ;
+    margin-top: 10px;
+    position: fixed;
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    width: 400px;
+    height: 70%;
+}
+.infovan img{
+    
+   position: absolute;
+   left: 60%;
+   bottom: 15%;
+    box-shadow: 5px 3px 15px 2px white;
+}

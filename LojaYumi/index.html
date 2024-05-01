@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagen/relogio1.webp" type="image/x-icon">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">  
+</head>
+<body>
+    <header>
+        <div class="logo"><i class='bx bxs-watch'></i>ClockBox</div>
+        <nav>
+
+            <a href="#">Contatos</a>
+            <a href="#">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Statics</a>
+        </nav>
+        <div class="menu">
+
+            <div class="menu-logo"><i class='bx bx-cart'></i></div>
+
+            <div class="menu-logo"><i class='bx bx-menu'></i></div>
+
+        </div>
+    </header>
+    <div class="content">
+        <div class="slides">
+            <input type="radio" name="slides" id="slides1" checked>
+            <input type="radio" name="slides" id="slides2">
+            <input type="radio" name="slides" id="slides3">
+
+            <div class="slide s1">
+                <img src="imagen/relogio1.webp" alt="">
+            </div>
+            <div class="slide">
+                <div class="grande"><img src="imagen/relogio2.png" alt=""></div>
+            </div>
+            <div class="slide">
+                <div class="grande"><img src="imagen/relogio3.png" alt=""></div>
+            </div>
+
+            <div class="navigation">
+                <label class="bar" for="slides1"></label>
+                <label class="bar" for="slides2"></label>
+                <label class="bar" for="slides3"></label>
+            </div>
+        </div>
+    </div>
+
+    <div class="text">
+        <h1>Luxury <br> Watch</h1>
+        <h5>luxury watches on sale</h5>
+        <h3>$347,00</h3>
+        <a href="#">Shop now</a>
+    </div>
+    <script>
+        var currentSlide = 1;
+        var totalSlides = document.querySelectorAll('.slides .slide').length;
+    
+        function showSlide(n) {
+            document.getElementById('slides' + n).checked = true;
+        }
+    
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide > totalSlides) {
+                currentSlide = 1;
+            }
+            showSlide(currentSlide);
+        }
+    
+        setInterval(nextSlide, 3000); // Troca de slide a cada 3 segundos
+    </script>
+</body>
+</html>

@@ -164,3 +164,16 @@ input{
 body{
     background-color:#1d2631; 
 }
+@media only screen and (max-width: 768px) {
+    .text{
+        top: 100%;
+        left: 20%;
+    }
+   .text a{
+     padding: 20px 30px;
+   }
+   nav a{
+        margin: 5px;
+        margin-bottom: 30px;
+   }
+}

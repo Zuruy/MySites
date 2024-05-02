@@ -1,0 +1,45 @@
+@media only screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    /* Exibe o menu de navegação quando o ícone do menu é clicado */
+    nav ul.show{
+        background-color: rgb(255, 255, 255);
+        padding: 30px;
+        height: 200px;
+        position: absolute;
+        margin-top: 10%;
+        left: 60%;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+    }
+
+    .show li {
+        margin-bottom: 30px;    
+    }
+
+    .show li a { 
+        color: black;
+    }
+    .show li a:hover { 
+        color: rgb(41, 176, 176);
+    }
+    #active {
+        display: block;
+    }
+
+    .text {
+        top: 100%;
+        left: 20%;
+    }
+
+    .text a {
+        padding: 20px 30px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+}

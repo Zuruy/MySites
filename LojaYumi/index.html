@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clock</title>
-
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsivo.css">
     <link rel="shortcut icon" href="imagen/relogio1.webp" type="image/x-icon">
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -13,21 +13,22 @@
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">  
 </head>
-<body>
+<body id="corpo" class="escuro">
     <header>
         <div class="logo"><i class='bx bxs-watch'></i>ClockBox</div>
         <nav>
-
-            <a href="#">Contatos</a>
-            <a href="#">Home</a>
-            <a href="#">Sobre</a>
-            <a href="#">Statics</a>
+            <ul>
+                <li><a href="#">Contatos</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Statics</a></li>
+            </ul>
         </nav>
         <div class="menu">
-
+            <div class="menu-logo" id="escuro" onclick="dark()"><i class='bx bx-moon'></i></div>
             <div class="menu-logo"><i class='bx bx-cart'></i></div>
 
-            <div class="menu-logo"><i class='bx bx-menu'></i></div>
+            <div class="menu-logo" id="active" onclick="menu()"><i class='bx bx-menu'></i></div>
 
         </div>
     </header>
@@ -63,8 +64,19 @@
     </div>
     <script>
         var currentSlide = 1;
-        var totalSlides = document.querySelectorAll('.slides .slide').length;
-    
+        var totalSlides = document.querySelectorAll('.slides .slide').length; 
+        
+        function menu() {
+    var navUL = document.querySelector('nav ul');
+    navUL.classList.toggle('show');
+}
+
+
+        function dark() {
+            var body = document.getElementById('corpo');
+            body.classList.toggle('luz');
+            body.classList.toggle('escuro');
+        }
         function showSlide(n) {
             document.getElementById('slides' + n).checked = true;
         }

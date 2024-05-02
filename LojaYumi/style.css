@@ -1,9 +1,16 @@
 header{
     color: var(--color-text);
     width: 100%;
-    display: flex;
+    display: inline-flex;
     padding: 30px 0px;
     z-index: 1000;
+    justify-content: center;
+}
+
+ul{
+    margin: 0;
+    display: flex;
+    list-style: none;
 }
 .logo {
     font-size: 25px;
@@ -13,6 +20,9 @@ header{
 .logo i{
     color:var(--main-color);
     margin-right: 5px;
+}
+#active{
+    display: none;
 }
 nav{
     padding: 5px;
@@ -40,14 +50,18 @@ nav a:hover{
     gap: 10px;
 }
 .menu-logo{
-    transition: all ease .55s;
+    transition: all ease .10s;
     cursor: pointer;
+}
+i{
+    transition: all ease .55s;
 }
 .menu-logo:hover{
     font-size: 30px;
     color: var(--main-color);
 }
 .text{
+    
     position: absolute;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -162,18 +176,60 @@ input{
 
 
 body{
+    
     background-color:#1d2631; 
 }
-@media only screen and (max-width: 768px) {
-    .text{
-        top: 100%;
-        left: 20%;
-    }
-   .text a{
-     padding: 20px 30px;
-   }
-   nav a{
-        margin: 5px;
-        margin-bottom: 30px;
-   }
+
+/* Estilos para o tema claro */
+.luz {
+    background-color: white;
+    color: black;
+}
+
+/* Estilos para o tema escuro */
+.escuro {
+    background-color: #1d2631;
+    color: white;
+}
+.luz a,
+.luz h1,
+.luz h3,
+.luz h5,
+.luz i,
+.luz header {
+    color: black;
+}
+.luz .text a{
+    border: 2px solid black;
+}
+.luz .text a:hover{
+    color: white;
+    background-color: black;
+}
+.luz i:hover{
+    font-size: 30px;
+    color: var(--main-color);
+}
+.luz .bar{
+    border: 2px solid aqua;
+}
+/* Estilos para o tema escuro */
+.escuro {
+    background-color: #1d2631;
+    color: white;
+}
+
+
+.escuro h1,
+.escuro h3,
+.escuro h5,
+.escuro i
+ {
+    color: white;
+}
+.escuro i:hover{
+    
+    font-size: 30px;
+    color: var(--main-color);
+
 }

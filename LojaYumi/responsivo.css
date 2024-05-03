@@ -26,6 +26,9 @@
     .show li a:hover { 
         color: rgb(41, 176, 176);
     }
+    .show li {
+        margin-bottom: 30px;    
+    }
     #active {
         display: block;
     }

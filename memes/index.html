@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">  
+    <title>Meme's</title>
+</head>
+<body>
+    <nav>
+        <div class="menu-logo" id="active" onclick="menu()"><i class='bx bx-menu'></i></div>
+        <ul>
+            <li>
+                <a id="s1" href="">Home</a>
+            </li>
+            <li>
+                <a href="">Memes</a>
+            </li>
+            <li>
+                <a href="">baixar</a>
+            </li>
+            <li>
+                <a href="#sobre">sobre</a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+            <div class="slides">
+                <input type="radio" name="slides" id="slides1" checked>
+                <input type="radio" name="slides" id="slides2">
+                <input type="radio" name="slides" id="slides3">
+
+                <div class="slide s1">
+                    <img class="pequeno" src="https://wallpapers-clan.com/wp-content/uploads/2023/12/aesthetic-pingu-meme-desktop-wallpaper-preview.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <div class="pequeno"><img src="https://wallpapers.com/images/featured/meme-ete8bd6yl8pkzukg.jpg" alt=""></div>
+                </div>
+                <div class="slide">
+                    <div><img src="https://c4.wallpaperflare.com/wallpaper/27/588/972/memes-wallpaper-thumb.jpg" alt=""></div>
+                </div>
+    
+                <div class="navigation">
+                    <label class="bar" for="slides1"></label>
+                    <label class="bar" for="slides2"></label>
+                    <label class="bar" for="slides3"></label>
+                </div>
+            </div>
+    </header>
+    <div class="info">
+        <a href="#" id="sobre">Sobre</a>
+        <h1>Melhores memes da atualidade</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt ducimus temporibus repellat illum optio cumque quibusdam facilis expedita praesentium non! Nam eligendi culpa, assumenda quam provident vel delectus ducimus iste.</p>
+    </div>
+    <div class="memes">
+        <div class="meme">
+            <img src="https://i.pinimg.com/originals/07/7a/8a/077a8af0c34f0208d97abe96b6a0ebdc.gif" alt="">
+        </div>
+        <a id="baixar" href="Memes/amous.gif" download>Download do Livro</a>
+
+    </div>
+
+
+    <script>
+          function menu() {
+          var navUL = document.querySelector('nav ul');
+          navUL.classList.toggle('show');
+      }
+
+
+    </script>
+</body>
+</html>

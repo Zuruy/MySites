@@ -4,28 +4,43 @@
     /* Isso garante que padding e border não alterem a largura e altura dos elementos */
 }
 
-nav {
+.fixed{
+    width: 100%;
+    
+}
+
+.principal {
+    
+    
+    font-family: Arial, Helvetica, sans-serif;
     height: 35px;
-    padding: 5px;
+    padding:5px 0px;
     background-color: #004186;
     width: 100%;
     color: white;
 }
 
-nav p, h5 {
+.principal p, h5 {
     padding-left: 40px;
+}
+.principal h5{
+    font-weight: 800;
 }
 
 header {
+    background-color: white;
+    width: 100%;
+  
     display: flex;
     align-items: center;
     /* Distribui os itens horizontalmente */
     border: 1px solid rgba(128, 128, 128, 0.612);
     height: 80px;
-    padding: 0 20px; /* Adiciona um espaçamento interno ao cabeçalho */
+    
 }
 
 header > img {
+  position: relative;
     height: 45px;
     margin-top: 9px;
     margin-right: 20px;
@@ -34,115 +49,143 @@ header > img {
 #direita {
     margin-left: auto; /* Coloca a div à direita */
     display: flex; /* Faz com que os itens dentro da div fiquem dispostos em linha */
+    font-size: 50px;
+    color: #004186;
 }
 
 #direita img {
     margin-right: 10px; /* Adiciona um espaço entre as imagens */
 }
-
-.carousel-container {
-    width: calc(70% - 40px); /* 70% da largura da tela menos a margem à esquerda */
-    height: 300px; /* Altura do carrossel */
-    overflow: hidden; /* Oculta as partes excedentes das imagens */
-    position: relative; /* Necessário para o posicionamento absoluto dos textos */
-    margin-left: 40px;
-    margin-top: 20px;
-    float: left; /* Faz com que o carrossel flutue à esquerda */
+.lados{
+    
+ margin-top: 30px;
+ margin-left: 60px;
+  position: relative;
+  
 }
 
-.carousel {
-    display: flex; /* Exibe as imagens em linha */
-    transition: transform 0.5s ease; /* Adiciona uma transição suave */
+.navigation{
+    position:absolute ;
+    bottom: 20px;
+    left: 80%;
+    display: inline-flex;
 }
-
-.carousel-item {
-    width: 100%; /* As imagens devem ocupar toda a largura do carrossel */
-    height: 100%; /* As imagens devem ocupar toda a altura do carrossel */
-    background-size: cover; /* Redimensiona as imagens para cobrir toda a área */
-    background-position: center; /* Centraliza as imagens horizontalmente */
-    position: absolute; /* Permite o posicionamento absoluto das imagens */
-    top: 0; /* Alinha as imagens ao topo do carrossel */
-    left: 0; /* Alinha as imagens à esquerda do carrossel */
-    opacity: 0; /* Inicialmente, as imagens estão invisíveis */
-    transition: opacity 0.5s ease; /* Adiciona uma transição suave para a opacidade */
-    z-index: 1; /* Garante que o degradê apareça atrás do texto */
-}
-
-.carousel-item.active {
-    opacity: 1; /* Torna a imagem ativa visível */
-}
-
-.text-overlay {
-    margin-left: 20px;
-    margin-top: 120px;
-    position: absolute; /* Permite o posicionamento absoluto dos textos */
-    /* Centraliza o texto na tela */
-    color: white; /* Cor do texto */
-    text-align: left;
-    /* Alinha o texto ao centro */
-    z-index: 2; /* Garante que o texto esteja na frente do degradê */
-}
-
-.text-overlay h1 {
-    margin-bottom: 10px;
-}
-
-.text-overlay p {
-    margin-bottom: 30px;
-    font-size: 1.5em;
-}
-
-.text-overlay > a {
-    text-transform: uppercase;
-    margin-top: 20px;
-    background-color: #DF8D2C;
-    text-decoration: none;
-    color: white;
-    padding: 15px 60px;
-    border-radius: 5px;
-    position: relative; /* Adicione esta linha */
-    z-index: 4; /* Adicione esta linha */
-    pointer-events: auto; /* Permitir eventos do mouse no link */
+.bar{
     cursor: pointer;
-}
+    margin: 5px;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background-color:rgba(166, 166, 166, 0.7) ;
+    transition-duration: 0.5s;
 
-.carousel-item::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+}
+.bar:hover{
+    
+    background-color: rgb(255, 158, 2);
+}
+.pequeno img{
+    width: 100%;
+}
+input{
+    display: none;
+}
+.slides{
+    position: relative;
+    display: flex;
+    width: 350%;
+    height: 300px;
+}
+.slide{
+    display: flex;
+    width: 100%;
+    transition: .6s;
+}
+.slide img{  
+    /*filter: sepia(1) hue-rotate(130deg) saturate(10) opacity(70%);*/
+    display: flex;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.341), rgba(0, 0, 255, 0.318));
-    z-index: 0; /* Coloca o degradê atrás da imagem */
+}
+.fundo{
+    padding: 0;
+    
+   
+}
+.fundo > img{
+    position: relative;
+    z-index: -1000;
+    content: "";
+    
 }
 
-.carousel-item:first-child {
-    animation: fade 10s infinite; /* 10s é a duração de cada slide */
+.info{
+   position:absolute;
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+   top: 40%;
+   margin-left: 20px;
+   width: 600px;
 }
-
-@keyframes slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+.info h2{
+    text-shadow: 10px 0px 5px  rgba(0, 0, 0, 0.316);
+    margin-bottom: 10px;
+    font-size: 1.8em;
 }
+.info p{
 
-@keyframes fade {
-    0% { opacity: 0; }
-    25% { opacity: 1; }
-    75% { opacity: 1; }
-    100% { opacity: 0; }
+    font-size: 20px;
+    margin-bottom: 30px;
+    
 }
+.info a{
+  
+    color: white;
+    text-decoration: none;
+    background-color: #DF8D2C;
+    padding: 15px 90px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#slides1:checked ~ .s1{
+    margin-left: 0;
 
+}
+.baixo{
+   position: relative;
+}
+.lados{
+    display: flex;
+}
+.baixo{
+    margin-top: 50px;
+    position: relative;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+.marque{
+    transition-duration: .3s;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    position: relative;
+    color: #004186;
+   width: 300px;
+    margin-bottom: 45px;
+    height: 100px;
+    
+
+}
+.marque:hover{
+    border-bottom: 7px solid #DF8D2C;
+}
+.marque i{
+    font-size: 60px;
+    margin-right: 30px;
+}
 @media only screen and (max-width: 600px) {
-    .carousel-container {
-        width: 100%;
-        height: 350px;
-        margin: 0%;
-    }
 
-    .text-overlay a {
-        padding: 15px 190px;
-    }
 
     #direita {
         margin: 10px 0;

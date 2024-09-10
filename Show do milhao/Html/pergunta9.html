@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../blobal.css">
+    <link rel="stylesheet" href="../Css/style.css">
+    <title>Perguntas</title>
+</head>
+<body>
+ 
+    <div class="perguntas">
+        <h1>Qual é o órgão mais pesado do corpo humano?</h1>
+        <div class="respostas">
+            <p class="erro" style="cursor: pointer;">A) Coração</p>
+            <p class="erro" style="cursor: pointer;">B) Pulmões</p>
+            <p id="Acerto" style="cursor: pointer;">C) Fígado 
+               </p>
+            <p class="erro" style="cursor: pointer;">D) Cérebro
+            </p>
+        </div>
+        <div class="Dinheiro">
+            <p>Erro = Perdeu</p>
+           
+            <p>Acerta = <b>500mil</b></p>
+        </div>
+    </div>
+   
+    <div class="img">
+        <img src="../image/apresentadora.jpg" alt="">
+    </div>
+   
+    <script>
+        // Redireciona ao clicar na resposta correta
+        document.getElementById("Acerto").onclick = function() {
+            window.location.href = "end.html";
+        }
+
+        // Adiciona funcionalidade para redirecionar ao clicar nas respostas erradas
+        var respostasErradas = document.getElementsByClassName('erro');
+        for (var i = 0; i < respostasErradas.length; i++) {
+            respostasErradas[i].onclick = function() {
+                window.location.href = "../erro.html"; // Página de erro ou recomeço
+            }
+        }
+    </script>
+</body>
+</html>

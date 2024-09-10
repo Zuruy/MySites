@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../blobal.css">
+    <link rel="stylesheet" href="../Css/style.css">
+    <title>Perguntas</title>
+</head>
+<body>
+ 
+    <div class="perguntas">
+        <h1>Quem pintou a Mona Lisa?</h1>
+        <div class="respostas">
+            <p class="erro" style="cursor: pointer;">A) Vincent van Gogh</p>
+            <p class="erro" style="cursor: pointer;">B)  Pablo Picasso</p>
+            <p id="Acerto" style="cursor: pointer;">C)  Leonardo da Vinci</p>
+            <p class="erro" style="cursor: pointer;">D) Michelangelo
+            </p>
+        </div>
+        <div class="Dinheiro">
+            <p>Erro = Perdeu</p>
+           
+            <p>Acerta = 32000</p>
+        </div>
+    </div>
+   
+    <div class="img">
+        <img src="../image/apresentadora.jpg" alt="">
+    </div>
+   
+    <script>
+        // Redireciona ao clicar na resposta correta
+        document.getElementById("Acerto").onclick = function() {
+            window.location.href = "pergunta8.html";
+        }
+
+        // Adiciona funcionalidade para redirecionar ao clicar nas respostas erradas
+        var respostasErradas = document.getElementsByClassName('erro');
+        for (var i = 0; i < respostasErradas.length; i++) {
+            respostasErradas[i].onclick = function() {
+                window.location.href = "../erro.html"; // Página de erro ou recomeço
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chuva de Meteoros</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0b0e2e;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Div inicial centralizada */
+    .container {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+
+    /* Expandir ao passar o mouse */
+    .container:hover {
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+    }
+
+    /* Texto estilizado dentro da div */
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Great Vibes', cursive;
+      font-size: 48px;
+      color: white;
+      white-space: nowrap;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    /* Animação do brilho no texto */
+    .text::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+      opacity: 0;
+      animation: shine 3s infinite;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes shine {
+      0% { left: -100%; opacity: 0; }
+      50% { left: 100%; opacity: 0.6; }
+      100% { left: 200%; opacity: 0; }
+    }
+
+    /* Estilo das estrelas */
+    .star {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      border-radius: 50%;
+      filter: blur(2px);
+      box-shadow: 
+        0 0 15px rgba(255, 255, 255, 0.9), 
+        0 0 30px rgba(255, 255, 255, 0.6);
+      opacity: 0;
+      animation: fall 3s linear infinite;
+    }
+
+    /* Animação diagonal suave */
+    @keyframes fall {
+      0% {
+        transform: translate(-50px, -50px) rotate(60deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(100vw, 100vh) rotate(60deg);
+        opacity: 0;
+      }
+    }
+
+    /* Rastro mais longo e claro */
+    .star::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150px;
+      height: 3px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent);
+      transform: translate(-50%, -50%) rotate(-30deg);
+      border-radius: 50%;
+      filter: blur(1px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="star-container">
+    <div class="text">Lhe dou as estrelas</div>
+  </div>
+
+  <script>
+    const container = document.getElementById('star-container');
+
+    // Função para criar uma estrela com rastro
+    function createStar() {
+      const star = document.createElement('div');
+      star.classList.add('star');
+
+      // Posição inicial aleatória
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.top = `${Math.random() * 100}%`;
+
+      // Atraso aleatório para a animação
+      star.style.animationDelay = `${Math.random() * 1.5}s`;
+
+      container.appendChild(star);
+
+      // Remover a estrela após a animação
+      setTimeout(() => {
+        star.remove();
+      }, 3000);
+    }
+
+    // Gerar estrelas continuamente
+    setInterval(createStar, 120);
+  </script>
+
+</body>
+</html>

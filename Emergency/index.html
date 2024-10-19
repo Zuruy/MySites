@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alerta de Saudade 💕</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: white;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    button {
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      padding: 20px 50px;
+      font-size: 24px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #e91e63;
+      transform: scale(1.1);
+    }
+  </style>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/email.min.js"></script>
+  
+  <script>
+    window.onload = function() {
+      emailjs.init("MvDk0NqgC7r1bype0"); // Substitua pela sua chave pública
+      console.log("EmailJS inicializado");
+    };
+
+    function enviarAlerta() {
+      const templateParams = {
+        to_name: "Morzinho",
+        from_name: "Nenem",
+        mensagem: "Estou com saudade! Dá atenção e carinho para eu ❤️"
+      };
+
+      console.log("Enviando com parâmetros:", templateParams);
+
+      emailjs.send("service_0pzwx9o", "template_vqjll5f", templateParams)
+      .then(function(response) {
+        console.log("SUCESSO:", response);
+        alert("Alerta de saudade enviado com sucesso! 🥰");
+      }, function(error) {
+        console.error("ERRO:", error);
+        alert("Erro ao enviar o alerta. 😢 Verifique a configuração.");
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Alerta de Saudade 💕</h1>
+    <button onclick="enviarAlerta()">Estou com saudade</button>
+  </div>
+</body>
+</html>

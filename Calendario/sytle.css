@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f0f4c3, #e1bee7);
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    padding: 15px;
+    margin: 10px 0;
+    width: 300px;
+    border: 2px solid #ff9af0;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border: 2px solid #d266e6;
+    outline: none;
+}
+
+button {
+    padding: 15px 30px;
+    background: #e1bee7;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #ad5af2;
+    transform: translateY(-2px);
+}
+
+ul.event-list {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0; /* Remove padding da lista */
+}
+
+li {
+    background: #decdf0;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Espaça os itens */
+    transition: transform 0.3s;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+.event-checkbox {
+    appearance: none; /* Remove o estilo padrão do checkbox */
+    width: 20px; /* Tamanho do checkbox */
+    height: 20px; /* Tamanho do checkbox */
+    border: 2px solid #d266e6; /* Borda do checkbox */
+    border-radius: 5px; /* Arredondar os cantos */
+    position: relative; /* Para posicionar o checkmark */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    margin-right: 10px; /* Espaçamento entre checkbox e label */
+}
+
+.event-checkbox:checked {
+    background-color: #d266e6; /* Cor do fundo quando marcado */
+}
+
+.event-checkbox:checked::after {
+    content: ''; /* Adiciona um conteúdo vazio */
+    position: absolute; /* Posiciona o checkmark */
+    left: 4px; /* Posição do checkmark */
+    top: 8px; /* Posição do checkmark */
+    width: 5px; /* Largura do checkmark */
+    height: 10px; /* Altura do checkmark */
+    border: solid white; /* Cor do checkmark */
+    border-width: 0 2px 2px 0; /* Estilo do checkmark */
+    transform: rotate(45deg); /* Rotaciona o checkmark */
+}
+
+.event-label {
+    flex-grow: 1; /* Permite que o label ocupe o espaço restante */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.delete-btn {
+    background: #e57373;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+.delete-btn:hover {
+    background: #ff3d3d; /* Altera a cor no hover */
+}
+/* ... código anterior ... */
+
+.event-item {
+    position: relative; /* Para permitir que o item deslize */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animação de transição */
+}
+
+.event-item.remove {
+    transform: translateX(100%); /* Move o item para a direita */
+    opacity: 0; /* Esconde o item */
+}
+
+/* ... código anterior ... */

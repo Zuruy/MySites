@@ -8,7 +8,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(135deg, #f0f4c3, #e1bee7);
     text-align: center;
-    padding: 50px;
+    padding: 20px; /* Diminuído o padding */
 }
 
 .container {
@@ -17,10 +17,8 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
-}
-
-.container:hover {
-    transform: scale(1.05);
+    max-width: 500px; /* Limita a largura máxima */
+    margin: auto; /* Centraliza a container */
 }
 
 h1 {
@@ -31,7 +29,8 @@ h1 {
 input {
     padding: 15px;
     margin: 10px 0;
-    width: 300px;
+    width: 100%; /* Altera a largura para 100% */
+    max-width: 300px; /* Limita a largura máxima */
     border: 2px solid #ff9af0;
     border-radius: 25px;
     font-size: 16px;
@@ -59,10 +58,10 @@ button:hover {
     transform: translateY(-2px);
 }
 
-ul.event-list {
+ul {
     list-style-type: none;
     margin-top: 20px;
-    padding: 0; /* Remove padding da lista */
+    padding: 0; /* Remove o padding da lista */
 }
 
 li {
@@ -71,45 +70,13 @@ li {
     border-radius: 10px;
     margin: 10px 0;
     display: flex;
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: space-between; /* Espaça os itens */
+    justify-content: space-between;
+    align-items: center;
     transition: transform 0.3s;
 }
 
 li:hover {
     transform: scale(1.02);
-}
-
-.event-checkbox {
-    appearance: none; /* Remove o estilo padrão do checkbox */
-    width: 20px; /* Tamanho do checkbox */
-    height: 20px; /* Tamanho do checkbox */
-    border: 2px solid #d266e6; /* Borda do checkbox */
-    border-radius: 5px; /* Arredondar os cantos */
-    position: relative; /* Para posicionar o checkmark */
-    cursor: pointer; /* Altera o cursor para indicar que é clicável */
-    margin-right: 10px; /* Espaçamento entre checkbox e label */
-}
-
-.event-checkbox:checked {
-    background-color: #d266e6; /* Cor do fundo quando marcado */
-}
-
-.event-checkbox:checked::after {
-    content: ''; /* Adiciona um conteúdo vazio */
-    position: absolute; /* Posiciona o checkmark */
-    left: 4px; /* Posição do checkmark */
-    top: 8px; /* Posição do checkmark */
-    width: 5px; /* Largura do checkmark */
-    height: 10px; /* Altura do checkmark */
-    border: solid white; /* Cor do checkmark */
-    border-width: 0 2px 2px 0; /* Estilo do checkmark */
-    transform: rotate(45deg); /* Rotaciona o checkmark */
-}
-
-.event-label {
-    flex-grow: 1; /* Permite que o label ocupe o espaço restante */
-    text-align: left; /* Alinha o texto à esquerda */
 }
 
 .delete-btn {
@@ -119,22 +86,29 @@ li:hover {
     border-radius: 5px;
     cursor: pointer;
     padding: 5px 10px;
-    transition: background 0.3s;
 }
 
-.delete-btn:hover {
-    background: #ff3d3d; /* Altera a cor no hover */
-}
-/* ... código anterior ... */
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Diminuído o padding para telas menores */
+    }
 
-.event-item {
-    position: relative; /* Para permitir que o item deslize */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Animação de transição */
+    input, button {
+        width: 90%; /* Aumenta a largura dos inputs e botões para 90% em telas menores */
+    }
+
+    button {
+        padding: 10px 20px; /* Ajusta o padding dos botões */
+    }
 }
 
-.event-item.remove {
-    transform: translateX(100%); /* Move o item para a direita */
-    opacity: 0; /* Esconde o item */
-}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px; /* Ajusta o tamanho do título para telas pequenas */
+    }
 
-/* ... código anterior ... */
+    input, button {
+        font-size: 14px; /* Ajusta o tamanho da fonte para inputs e botões */
+    }
+}

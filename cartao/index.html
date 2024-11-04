@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+
+    <style>
+        body{
+            font-family: 'Great Vibes', cursive;
+            
+        }
+    </style>
+    <title>Carta de Amor</title>
+</head>
+<body>
+    <div class="container">
+        <div class="cart">
+            <div id="titulo">
+                Meu amor eu te amo
+            </div>
+            <div class="linhas">
+                Te amo minha bebe, cada momento com você é como uma poesia, e meu amor por você cresce mais a cada dia...
+            </div>
+            <div class="linhas">
+                Desde que você chegou, cada momento tem sido uma doce surpresa. Você é a parte mais bonita dos meus dias e a razão de todos os meus sorrisos
+            </div>
+            <div class="linhas">
+                Se eu pudesse escolher onde ficar para sempre, escolheria estar ao seu lado, sem hesitar. Cada segundo com você é um tesouro que guarda no coração. hehe te amo
+            </div>
+        </div>
+        <div id="triangulo1">
+        </div>
+        <div class="cartao">
+           <div id="gab">
+               <div id="flex">
+                   <div id="triangulo2">
+                   </div>
+                   <div id="triangulo3">
+                   </div>
+               </div>
+               <div id="triangulo4">
+               </div>
+           </div>
+        </div>
+        <div id="botoes">
+            <button onclick="abrir()" id="open">
+                Open cart
+            </button>
+            <button onclick="sair()" id="exit">
+                Exit cart
+            </button>
+        </div>
+    </div>
+    <script>
+        function abrir() {
+            const carta = document.querySelector('.cart');
+            const triangulo = document.getElementById('triangulo1');
+            
+            carta.classList.remove('sair'); // Remove a classe 'sair' antes de abrir
+            carta.classList.add('subindo'); // Adiciona a classe 'subindo' para ativar a animação
+            triangulo.classList.add('aberto'); // Adiciona a classe para girar o triângulo
+        }
+    
+        function sair() {
+            const carta = document.querySelector('.cart');
+            const triangulo = document.getElementById('triangulo1');
+            
+            carta.classList.remove('subindo'); // Remove a classe 'subindo' antes de fechar
+            carta.classList.add('sair'); // Adiciona a classe 'sair' para ativar a animação
+            triangulo.classList.remove('aberto'); // Remove a classe para voltar à posição original
+        }
+    </script>
+    
+    
+</body>
+</html>

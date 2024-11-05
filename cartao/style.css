@@ -12,6 +12,7 @@
     width: 400px;
     background-color: rgb(242, 210, 184);
     height: 250px;
+    z-index: 1000;
 
     
 }
@@ -20,7 +21,7 @@
 }
 @keyframes subir{
     100%{
-        bottom: 35%;
+        bottom: 60%;
     }
 }
 
@@ -70,12 +71,26 @@
 
 
 #triangulo1 {
+    z-index: 2000;
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    top: -00%;
+    border-left: 210px solid transparent;
+    border-right: 210px solid transparent;
+    border-bottom: 140px solid rgb(193, 41, 66);
+    transform-style: preserve-3d; /* Permite que o efeito 3D seja mantido */
+    transform: rotateX(180deg); */
+}
+.aberto {
+    animation: girar 0s linear forwards;
+}
 
-width: 0; 
-height: 0; 
-border-left: 210px solid transparent;
-border-right: 210px solid transparent;
-border-bottom: 130px solid rgb(193, 41, 66);
+@keyframes girar {
+    100% {
+        transform: rotateX(360deg); /* Aplica a rotação em 3D */
+        
+    }
 }
 #triangulo2 { 
 

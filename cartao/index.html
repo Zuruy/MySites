@@ -33,7 +33,9 @@
         <div id="triangulo1">
         </div>
         <div class="cartao">
+           
            <div id="gab">
+           
                <div id="flex">
                    <div id="triangulo2">
                    </div>
@@ -57,19 +59,21 @@
         function abrir() {
             const carta = document.querySelector('.cart');
             const triangulo = document.getElementById('triangulo1');
-            
+            carta.style.zIndex = '3000'
             carta.classList.remove('sair'); // Remove a classe 'sair' antes de abrir
             carta.classList.add('subindo'); // Adiciona a classe 'subindo' para ativar a animação
             triangulo.classList.add('aberto'); // Adiciona a classe para girar o triângulo
+            triangulo.style.top = "-43%"
         }
     
         function sair() {
             const carta = document.querySelector('.cart');
             const triangulo = document.getElementById('triangulo1');
-            
+            carta.style.zIndex = '-3000'
             carta.classList.remove('subindo'); // Remove a classe 'subindo' antes de fechar
             carta.classList.add('sair'); // Adiciona a classe 'sair' para ativar a animação
             triangulo.classList.remove('aberto'); // Remove a classe para voltar à posição original
+            triangulo.style.top = "00%"
         }
     </script>
     

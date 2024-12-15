@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Te amo</title>
+</head>
+<body>
+    <div class="container">
+        <div class="juntos">
+            <input onclick="check()" type="checkbox" name="" id="eu">
+            <label id="c1" for="eu"><strong>Eu</strong></label>
+            <input onclick="check()" type="checkbox" name="" id="you">
+            <label id="c2" for="you"><strong>Te</strong></label>
+        </div>
+        <input onclick="check()" type="checkbox" name="" id="amo">
+        <label id="q" for="amo"><strong>Amo</strong></label>
+       
+    </div>
+    <span>(Clique neles)</span>
+
+    <script>
+   function check() {
+    // Seleciona todos os checkboxes
+    const eu = document.getElementById('eu');
+    const you = document.getElementById('you');
+    const amo = document.getElementById('amo');
+
+    // Verifica se todos os checkboxes estão marcados
+    if (eu.checked && you.checked && amo.checked) {
+        // Adiciona a classe "pulsando" à div container
+        const container = document.querySelector('.container');
+        container.classList.add('pulsando');
+    } else {
+        // Remove a classe "pulsando" se algum checkbox for desmarcado
+        const container = document.querySelector('.container');
+        container.classList.remove('pulsando');
+    }
+}
+
+    </script>
+</body>
+</html>

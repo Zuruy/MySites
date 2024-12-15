@@ -95,6 +95,11 @@ input:checked ~ strong{
   
   /* Classe para o coração pulsar */
   .pulsando {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    
+
     animation: pulsar 1.5s infinite;
   }
   

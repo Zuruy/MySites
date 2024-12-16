@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Night and Day</title>
+</head>
+<body>
+    <div class="chek">
+        <label class="switch">
+            <div class="warp">
+                <input type="checkbox" name="" id="box" onclick="dark()">
+                <span class="button">
+                    <div class="sol">
+                        <img src="https://favim.com/pd/p/orig/2018/09/02/anime-pixel-anime-gif-pixel-blossom-Favim.com-6261586.gif" alt="">
+                    </div>
+                    <div class="noite">
+                        <img src="https://favim.com/pd/p/orig/2018/08/25/pink-sakura-pixel-pixel-art-Favim.com-6235216.gif" alt="">
+                    </div>
+                </span>
+            </div>
+        </label>
+    </div>
+    <script>
+        function dark() {
+            const corpo = document.body;
+            
+            // Alterna a classe 'dark-mode' no corpo
+            corpo.classList.toggle('dark-mode');
+            
+            // Define a cor com base na classe
+            if (corpo.classList.contains('dark-mode')) {
+                corpo.style.backgroundColor = "black";
+                corpo.style.transition = '.8s'
+            } else {
+                corpo.style.backgroundColor = "white";
+            }
+        }
+    </script>
+</body>
+</html>
